@@ -19,14 +19,14 @@ app = Flask(__name__,
 @app.route('/volume')
 def volume():
     return render_template("volume.html",
-        myfile=volume_file
+        volume_file=volume_file
     )
 
 @app.route('/isosurface')
 def isosurface():
     return render_template("isosurface.html",
-        myfile0=volume_file,
-        myfile=surface_file
+        volume_file=volume_file,
+        surface_file=surface_file
     )
 
 if __name__ == '__main__':
