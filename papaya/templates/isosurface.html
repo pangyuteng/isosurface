@@ -16,13 +16,14 @@
     <script type="text/javascript">
         var params = [];
         params["images"] = ["{{ url_for('static', filename=volume_file)}}"];
-        params["surfaces"] = ["{{ url_for('static', filename=surface_file)}}"];
-        params["smoothDisplay"] = false;
-        params["mainView"] = "coronal";        
+        params["surfaces"] = ["{{ url_for('static', filename=surface_file_100)}}","{{ url_for('static', filename=surface_file_900) }}"];
+        params["example_100.vtk"] = {color: [1, 0, 0], alpha: 0.3};
+        params["example_900.vtk"] = {color: [0, 1, 0], alpha: 0.8};
     </script>
 
 </head>
 <body>
+    
     hello world<br>
     <div class="papaya" data-params="params"></div>
 </body>

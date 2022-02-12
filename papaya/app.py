@@ -7,8 +7,9 @@ from flask import (
 )
 
 
-volume_file = 'example.nii.gz'
-surface_file = 'example.vtk'
+volume_file = 'example.nii' # not sure why nii.gz can't be loaded!
+surface_file_100 = 'example_100.vtk'
+surface_file_900 = 'example_900.vtk'
 
 app = Flask(__name__,
     static_url_path='/static',
@@ -26,7 +27,8 @@ def volume():
 def isosurface():
     return render_template("isosurface.html",
         volume_file=volume_file,
-        surface_file=surface_file
+        surface_file_100=surface_file_100,
+        surface_file_900=surface_file_900
     )
 
 if __name__ == '__main__':

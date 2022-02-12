@@ -16,6 +16,7 @@
     <script type="text/javascript">
         var params = [];
         params["images"] = ["{{ url_for('static', filename=volume_file)}}"];
+        params["example.nii"] = {"min": 50, "max": 1000};
         params["smoothDisplay"] = false;
         params["mainView"] = "coronal";        
     </script>
